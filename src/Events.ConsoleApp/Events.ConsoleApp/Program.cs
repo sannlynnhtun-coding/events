@@ -9,35 +9,43 @@ string jsonString = await File.ReadAllTextAsync(DateTime.Now.Year + ".json");
 // Deserialize the JSON string to a list of dictionaries
 var list = JsonConvert.DeserializeObject<List<EventGroup>>(jsonString);
 
-bool isRunning = true;
-while (isRunning)
+for (int i = 0; i < list.Count; i++)
 {
-    // Example input date string
-    string inputDate = Console.ReadLine()!; // Replace this with your input date
-
-    // Parse the input date
-    DateTime date = DateTime.ParseExact(inputDate, "yyyy-MM-dd", null);
-
-    // Calculate the total days from the start of the year
-    int dayOfYear = date.DayOfYear;
-
-    // Find the corresponding ID for the input date using LINQ
-    var id = list
-        .Where(x => x.Id == dayOfYear)
-        .Select(x => x.GitHubFileId)
-        .FirstOrDefault();
-
-    var result = new
-    {
-        Date = inputDate,
-        TotalDays = dayOfYear,
-        GitHubFileId = id
-    };
-
-    // Serialize the result to JSON
-    string json = JsonConvert.SerializeObject(result, Formatting.Indented);
-    Console.WriteLine(json);
+    list[i].Id = Convert.ToInt32(
+        Convert.ToDateTime("2024-01-01").AddDays(i).ToString("yyyyMMdd"));
 }
+
+jsonString = JsonConvert.SerializeObject(list, Formatting.Indented);
+
+bool isRunning = true;
+//while (isRunning)
+//{
+//    // Example input date string
+//    string inputDate = Console.ReadLine()!; // Replace this with your input date
+
+//    // Parse the input date
+//    DateTime date = DateTime.ParseExact(inputDate, "yyyy-MM-dd", null);
+
+//    // Calculate the total days from the start of the year
+//    int dayOfYear = date.DayOfYear;
+
+//    // Find the corresponding ID for the input date using LINQ
+//    var id = list
+//        .Where(x => x.Id == dayOfYear)
+//        .Select(x => x.GitHubFileId)
+//        .FirstOrDefault();
+
+//    var result = new
+//    {
+//        Date = inputDate,
+//        TotalDays = dayOfYear,
+//        GitHubFileId = id
+//    };
+
+//    // Serialize the result to JSON
+//    string json = JsonConvert.SerializeObject(result, Formatting.Indented);
+//    Console.WriteLine(json);
+//}
 
 static void GetYearJson()
 {
