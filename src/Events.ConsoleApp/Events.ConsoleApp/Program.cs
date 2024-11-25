@@ -9,11 +9,18 @@ string jsonString = await File.ReadAllTextAsync(DateTime.Now.Year + ".json");
 // Deserialize the JSON string to a list of dictionaries
 var list = JsonConvert.DeserializeObject<List<EventGroup>>(jsonString);
 
-for (int i = 0; i < list.Count; i++)
-{
-    list[i].Id = Convert.ToInt32(
-        Convert.ToDateTime("2024-01-01").AddDays(i).ToString("yyyyMMdd"));
-}
+//for (int i = 0; i < list.Count; i++)
+//{
+//    list[i].Id = Convert.ToInt32(
+//        Convert.ToDateTime("2024-01-01").AddDays(i).ToString("yyyyMMdd"));
+//    list[i].Events = list[i].Events.Select(e => new Event
+//    {
+//        GitHubFileId = list[i].GitHubFileId,
+//        EndDate = e.EndDate,
+//        StartDate = e.StartDate,
+//        Title = e.Title
+//    }).ToList();
+//}
 
 jsonString = JsonConvert.SerializeObject(list, Formatting.Indented);
 
@@ -63,7 +70,7 @@ static void GetYearJson()
         list.Add(new EventGroup
         {
             Id = i,
-            GitHubFileId = Ulid.NewUlid().ToString(),
+            //GitHubFileId = Ulid.NewUlid().ToString(),
             Events = new List<Event>()
         });
     }
@@ -76,12 +83,13 @@ static void GetYearJson()
 public class EventGroup
 {
     public int Id { get; set; }
-    public string GitHubFileId { get; set; }
+    //public string GitHubFileId { get; set; }
     public List<Event> Events { get; set; }
 }
 
 public class Event
 {
+    public string GitHubFileId { get; set; }
     public string Title { get; set; }
     public DateTime StartDate { get; set; }
     public DateTime EndDate { get; set; }
