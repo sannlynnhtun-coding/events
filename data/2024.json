@@ -1313,8 +1313,8 @@
             {
                 "GitHubFileId": "01JDEF9N6EXJ1XCRXYKE4H3RHQ",
                 "Title": "𝐀𝐖𝐒 𝐂𝐨𝐦𝐦𝐮𝐧𝐢𝐭𝐲 𝐃𝐚𝐲 𝐌𝐲𝐚𝐧𝐦𝐚𝐫 𝟐𝟎𝟐𝟒",
-                "StartDate": "2024-11-24T12:00:00",
-                "EndDate": "2024-11-24T17:00:00"
+                "Start": "2024-11-24T12:00:00",
+                "End": "2024-11-24T17:00:00"
             }
         ]
     },
@@ -1352,14 +1352,14 @@
             {
                 "GitHubFileId": "01JDEF9N6EW7TP75BMCYQ5P6YE",
                 "Title": "𝐃𝐞𝐯𝐅𝐞𝐬𝐭 𝐘𝐚𝐧𝐠𝐨𝐧 𝟐𝟎𝟐4",
-                "StartDate": "2024-12-01T09:00:00",
-                "EndDate": "2024-12-01T15:00:00"
+                "Start": "2024-12-01T09:00:00",
+                "End": "2024-12-01T15:00:00"
             },
             {
                 "GitHubFileId": "01JDJHG2Q7A5PV6ZGAQDEG457B",
                 "Title": "Breaking Through the Barriers of Career Path",
-                "StartDate": "2024-12-01T17:00:00",
-                "EndDate": "2024-12-01T18:30:00"
+                "Start": "2024-12-01T17:00:00",
+                "End": "2024-12-01T18:30:00"
             }
         ]
     },
