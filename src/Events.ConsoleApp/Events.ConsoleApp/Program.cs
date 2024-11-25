@@ -4,6 +4,8 @@ using Formatting = Newtonsoft.Json.Formatting;
 
 //GetYearJson();
 
+Console.WriteLine(Ulid.NewUlid().ToString());
+
 string jsonString = await File.ReadAllTextAsync(DateTime.Now.Year + ".json");
 
 // Deserialize the JSON string to a list of dictionaries
