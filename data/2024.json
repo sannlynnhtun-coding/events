@@ -1305,26 +1305,7 @@
   },
   {
     "Id": 20241122,
-    "Events": [
-      {
-        "GitHubFileId": "01JDTB8Q14KVRG3FA7G7DXB65Y",
-        "Title": "Tea Meeting",
-        "Start": "2024-11-22T00:00:00",
-        "End": "2024-11-29T00:00:00"
-      },
-      {
-        "GitHubFileId": "01JDTBKWPYDBSMK0ZDG8Z2KCF4",
-        "Title": "Tea Meeting",
-        "Start": "2024-11-22T00:00:00",
-        "End": "2024-11-29T00:00:00"
-      },
-      {
-        "GitHubFileId": "01JDTBXPTR5F3R42B5BRB1KPQF",
-        "Title": "Tea Meeting",
-        "Start": "2024-11-22T00:00:00",
-        "End": "2024-11-29T00:00:00"
-      }
-    ]
+    "Events": []
   },
   {
     "Id": 20241123,
@@ -1500,19 +1481,6 @@
   },
   {
     "Id": 20241129,
-    "Events": [
-      {
-        "GitHubFileId": "01JDTAKB6B8C4DF7TDKTK88RHH",
-        "Title": "Tea Meeting",
-        "Start": "2024-11-29T00:00:00",
-        "End": "2024-11-29T00:00:00"
-      },
-      {
-        "GitHubFileId": "01JDTAMZFMASR7PDYVPHYTP1VF",
-        "Title": "Tea Meeting",
-        "Start": "2024-11-29T00:00:00",
-        "End": "2024-11-29T00:00:00"
-      }
-    ]
+    "Events": []
   }
 ]
